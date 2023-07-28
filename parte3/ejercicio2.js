@@ -16,15 +16,15 @@ Input:
 
 
 
-let input;
+let lugar;
 const ciudades = [];
 let  paris = "paris";
 while (true) {
-  input = prompt("ingrese dato:");
-  if(input === null){
+    lugar = prompt("ingrese una ciudad ");
+  if(lugar === null){
     break
   }
-  ciudades.push(input);
+  ciudades.push(lugar);
 }
 ciudades.splice(ciudades.length -1);
 console.log("Array original")
