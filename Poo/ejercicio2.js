@@ -3,9 +3,14 @@ const cuenta = {
     saldo:0,
     
     ingresar(dinero){
-        this.saldo += dinero;
-        console.log("el dinero ingresado es : " + dinero);
-        this.informar();
+        if(0 < dinero){
+          this.saldo += dinero;
+          console.log("el dinero ingresado es : " + dinero);
+          this.informar();
+        }else{
+          console.log("Por favor ingrese un monto superio a 0")
+        }
+        
   
     },
     extraer(dinero){
@@ -31,9 +36,10 @@ const cuenta = {
 
 
   let salir;
-
-do{
+  let opc;
   alert(`Bienvenido ${cuenta.nombre}`)
+do{
+  
   let opc = prompt("Digite una opcion 1 - Ingresar Dinero 2 - Extraer Dinero 3 - Ver saldo 4 - Salir");
   
   
@@ -49,11 +55,14 @@ do{
       let extraer = parseInt(prompt("Digite el monto a extraer"))
       cuenta.extraer(extraer)
       salir = prompt("Desea realizar otra operacion Si/No").toUpperCase();
+      
       break;
     case "3":
      cuenta.informar();
      salir = prompt("Desea realizar otra operacion Si/No").toUpperCase();
       break;
+      case "4":
+        break
     default:
       if(opc === null){
         break;
@@ -62,4 +71,4 @@ do{
       salir = prompt("Desea realizar otra operacion Si/No").toUpperCase();
       break;
   }
-}while(salir.toUpperCase() === "SI");
+}while(salir.toUpperCase() === "SI" || opc === "4" );
