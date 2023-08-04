@@ -9,9 +9,7 @@ const tirarDados = ()=>{
   return Math.round(Math.random()*1*6);
 }
 
- const lanzamientoDeDados = (array)=>{
-
- }
+ 
 for(let i = 0; i < 50;i++){
   let dado1 = tirarDados();
   let dado2 = tirarDados();
