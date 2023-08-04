@@ -49,7 +49,7 @@ class Persona{
     mostrarDatos(){
         console.log(`Nombre : ${this.nombre}`);
         console.log(`Edad : ${this.edad}`);
-        console.log(`Dni : ${this.DNI}`);
+        console.log(`Dni : ${this.generarDNI()}`);
         console.log(`peso : ${this.peso}`);
         console.log(`altura : ${this.altura}`);
         console.log(`Fecha de Nacimiento : ${this.FechaDeNacimiento}`);
@@ -67,4 +67,4 @@ const per = new Persona("Martin",edad,"Hombre",89,1.73,fecha);
 per.mostrarGeneracion(fecha);
 per.esMayorDeEdad(edad)
 per.mostrarDatos();
-const dni = per.generarDNI();
+
