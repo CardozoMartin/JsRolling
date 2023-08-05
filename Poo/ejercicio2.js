@@ -40,7 +40,7 @@ const cuenta = {
   alert(`Bienvenido ${cuenta.nombre}`)
 do{
   
-  let opc = prompt("Digite una opcion 1 - Ingresar Dinero 2 - Extraer Dinero 3 - Ver saldo 4 - Salir");
+  let opc = prompt("Digite una opcion \n1 - Ingresar Dinero \n2 - Extraer Dinero \n3 - Ver saldo \n4 - Salir");
   
   
   switch (opc) {
@@ -71,4 +71,4 @@ do{
       salir = prompt("Desea realizar otra operacion Si/No").toUpperCase();
       break;
   }
-}while(salir.toUpperCase() === "SI" || opc === "4" );
+}while(salir.toUpperCase() === "SI");
