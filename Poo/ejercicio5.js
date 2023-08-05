@@ -60,11 +60,17 @@ class Persona{
         console.log(`El dni es : ${this.DNI}`);
     }
 }
-let fecha = 1930;
+let fecha = "1990";
 let edad = 15;
 const per = new Persona("Martin",edad,"Hombre",89,1.73,fecha);
 
+
+console.log("Tu generacion y tu rasgo caracteristicos es :")
 per.mostrarGeneracion(fecha);
+console.log("--------------------------------------")
+console.log("Verificando si es mayor de edad ")
 per.esMayorDeEdad(edad)
+console.log("--------------------------------------")
+console.log("Todos los Datos de la Persona son :")
 per.mostrarDatos();
 
