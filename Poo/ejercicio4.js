@@ -1,4 +1,4 @@
-"Use strict"
+
 
 /*
 4- Escribe una clase Producto para crear objetos. Estos objetos, deben presentar las propiedades código, nombre y precio, además del método imprime datos, el cual escribe por pantalla los valores de sus propiedades.
@@ -38,5 +38,5 @@ const productosArr = [pro, pro1, pro2]
 }
   }
 
-  productosArr.forEach(mostrarDatos());
+productosArr.forEach(mostrarDatos());
   
