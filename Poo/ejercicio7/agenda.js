@@ -44,17 +44,28 @@ export class Agenda {
       }
 
       eliminarContacto(nombre){
-        const contacto = this.contactos.find((item) => {
-            return item.nombre.toLowerCase() === nombre.toLowerCase();
-          });
-        
+
+        const eliminar = this.contactos.findIndex((item)=>{
+          return item.nombre === nombre;
+        });
+        let validar = confirm("desea eliminar este contacto");
+
+        if(validar){
+          console.log(` El contacto${eliminar.nombre} fue eliminado`)
+  
+          this.contactos.splice(eliminar,1)
+          
+        }
+
+
+       /*
         if(contacto !== -1){
             console.log(`el contacto ${contacto.nombre} eliminado de la agenda`)
             this.contactos.splice(contacto,1);
             
         }else{
             console.log("No se encontro ningun contacto con ese nombre")
-        }
+        }*/
       }
 
       agendaLlena(){
@@ -62,6 +73,6 @@ export class Agenda {
       }
 
       huecosLibres() {
-        return this.tamanio - this.contactos.length;
+        return this.tamanio  - this.contactos.length;
     }
 }
