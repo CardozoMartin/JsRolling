@@ -1,9 +1,8 @@
 "Use strict"
 export class Persona {
-  constructor(nombre, edad, DNI, sexo, peso, altura, FDN) {
+  constructor(nombre, edad, sexo, peso, altura, FDN) {
     this.nombre = nombre;
     this.edad = edad;
-    this.DNI = DNI;
     this.sexo = sexo;
     this.peso = peso;
     this.altura = altura;
@@ -32,10 +31,11 @@ export class Persona {
     }
   }
   esMayorDeEdad(edad) {
+    
     if (edad >= 18) {
-      console.log("Eres mayor de edad");
+      alert("Eres mayor de edad");
     } else {
-      console.log(
+      alert(
         "eres menor de edad mi ray, a la casa a dormir y ver mario bross"
       );
     }
@@ -45,7 +45,6 @@ export class Persona {
   mostrarDatos() {
     console.log(`Nombre : ${this.nombre}`);
     console.log(`Edad : ${this.edad}`);
-    console.log(`Dni : ${this.DNI}`);
     console.log(`Genero : ${this.sexo}`);
     console.log(`peso : ${this.peso}`);
     console.log(`altura : ${this.altura}`);

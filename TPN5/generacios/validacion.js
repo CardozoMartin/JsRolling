@@ -39,6 +39,26 @@ export const validateNumber = (value, campo) => {
   campo.classList.add('is-valid');
   return true;
 };
+export const validacionGenero = (value, campo) => {
+  // Minima long del nombre
+  if (value.trim().length <= 2) {
+    campo.classList.add('is-invalid');
+    campo.classList.remove('is-valid');
+
+    return false;
+  }
+
+  // Maxima long del nombre
+  if (value.trim().length >= 100) {
+    campo.classList.add('is-invalid');
+    campo.classList.remove('is-valid');
+    return false;
+  }
+
+  campo.classList.remove('is-invalid');
+  campo.classList.add('is-valid');
+  return true;
+};
 
 export const validarAltura = (value, campo) => {
     if (value < 0 && value>100) {
