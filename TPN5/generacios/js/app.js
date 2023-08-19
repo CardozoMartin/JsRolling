@@ -1,3 +1,4 @@
+"Use strict"
 import { Persona } from "./persona.js";
 import { 
   validacionGenero,
@@ -85,8 +86,14 @@ inputNombre.addEventListener('blur', (e) => {
     const botonVerificar = document.createElement('button');
     botonVerificar.classList = ("btn btn-warning")
     botonVerificar.textContent = 'Verificar Edad';
-    botonVerificar.addEventListener('click', (edad)=>{
-      if(edad < 18){
+    botonVerificar.addEventListener('click', ()=>{
+
+      
+      
+      
+      const verificarFecha = new Date().getFullYear() - new Date(persona.FechaDeNacimiento).getFullYear();
+      console.log(verificarFecha);
+      if(verificarFecha > 18){
         alert("es Mayor")
       }else{
         alert("es menor")
@@ -107,7 +114,7 @@ inputNombre.addEventListener('blur', (e) => {
       <td>${item.peso}</td>
       <td>${item.altura}</td>
       <td>${item.FechaDeNacimiento}</td>
-      <td><button class="btn btn-warning onClick="mayorMenor(${item.edad})">Ver generacion</button></td>
+      <td><button class="btn btn-warning" onclick="mayorMenor(${item.edad})">Ver generacion</button></td>
       `
       
       fila.innerHTML = columnas;
@@ -131,15 +138,15 @@ inputNombre.addEventListener('blur', (e) => {
       // Entra SOLAMENTE si TODAS son validas
       // Crear el contacto
       const nuevaPersona = new Persona(nombre,edad,genero,peso,altura,FechNac);
-            personas.push(nuevaPersona); // Agregar persona al array
+            personas.push(nuevaPersona);
             console.log(personas)
             mostrarPersonaEnPantalla(nuevaPersona);
 
       document.getElementById('formulario').reset();
   
-      
+      nuevaPersona.esMayorDeEdad()
   
-      // guardar el contacto -> JSON & localStorage
+    
     }
   });
 

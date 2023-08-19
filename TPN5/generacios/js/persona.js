@@ -8,20 +8,23 @@ export class Persona {
     this.altura = altura;
     this.FechaDeNacimiento = FDN;
   }
-  mostrarGeneracion(FechaDeNacimiento) {
-    if (FechaDeNacimiento >= 1994 && FechaDeNacimiento <= 2010) {
+  mostrarGeneracion() {
+    console.log(this.FechaDeNacimiento)
+    const año = this.FechaDeNacimiento.split("/")[0];
+
+    if (año >= 1994 && año <= 2010) {
       console.log("Generacion Z");
       console.log("Su rasgo caracteristico es : Irreverencia");
-    } else if (FechaDeNacimiento >= 1981 && FechaDeNacimiento <= 1993) {
+    } else if (año >= 1981 && año <= 1993) {
       console.log("Generacion Y millennials");
       console.log("Su rasgo caracteristico es : Frustracion");
-    } else if (FechaDeNacimiento >= 1969 && FechaDeNacimiento <= 1980) {
+    } else if (año >= 1969 && año <= 1980) {
       console.log("Generacion X");
       console.log("Su rasgo caracteristico es : Obsesion por el exito");
-    } else if (FechaDeNacimiento >= 1949 && FechaDeNacimiento <= 1969) {
+    } else if (año >= 1949 && año <= 1969) {
       console.log("Baby Boom");
       console.log("Su rasgo caracteristico es : Ambicion");
-    } else if (FechaDeNacimiento >= 1930 && FechaDeNacimiento <= 1948) {
+    } else if (año >= 1930 && año <= 1948) {
       console.log("Silent Generacion");
       console.log("Su rasgo caracteristico es : Austeridad");
     } else {
