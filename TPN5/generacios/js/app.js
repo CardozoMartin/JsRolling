@@ -79,7 +79,7 @@ inputNombre.addEventListener('blur', (e) => {
   
   const cargarTabla = document.getElementById('cargarTabla');
 
-  function mostrarPersonaEnPantalla(persona) {
+  /*function mostrarPersonaEnPantalla(persona) {
     const item = document.createElement('li');
     item.textContent = `Nombre: ${persona.nombre}, Edad: ${persona.edad}, Sexo: ${persona.sexo}, peso: ${persona.peso}, altura: ${persona.altura}, Fecha de Nacimiento: ${persona.FechaDeNacimiento}`;
     
@@ -102,26 +102,49 @@ inputNombre.addEventListener('blur', (e) => {
 
     item.append(botonVerificar);
     cargarTabla.append(item);
-}
-  /*const cargarPersona = ()=>{
+}*/
+  const cargarPersona = (persona)=>{
     personas.forEach((item,)=>{
      
       const fila = document.createElement('tr');
-      const columnas = `
-      <td>${item.nombre}</td>
-      <td>${item.edad}</td>
-      <td>${item.sexo}</td>
-      <td>${item.peso}</td>
-      <td>${item.altura}</td>
-      <td>${item.FechaDeNacimiento}</td>
-      <td><button class="btn btn-warning" onclick="mayorMenor(${item.edad})">Ver generacion</button></td>
-      `
       
+      const columnas = `
+      <td class="py-2">${item.nombre}</td>
+      <td class="py-2">${item.edad}</td>
+      <td class="py-2">${item.sexo}</td>
+      <td class="py-2">${item.peso}Kg</td>
+      <td class="py-2">${item.altura}Cm</td>
+      <td class="py-2">${item.FechaDeNacimiento}</td>
+      `
+      const botonVerificar = document.createElement('button');
+      botonVerificar.classList = ("btn btn-warning mb-2 mt-2 g-2")
+      botonVerificar.textContent = 'Verificar Edad';
+      botonVerificar.addEventListener('click', ()=>{
+      const verificarFecha = new Date().getFullYear() - new Date(item.FechaDeNacimiento).getFullYear();
+      console.log(verificarFecha);
+      if(verificarFecha > 18){
+        alert(`${item.nombre} Eres mayor de edad`)
+      }else{
+        alert(`${item.nombre} Eres menor de edad`)
+      }
+    });
+      
+      
+      const botonGeneraciones = document.createElement('button');
+      botonGeneraciones.classList = ("btn btn-success mb-2 mt-2 mx-5")
+      botonGeneraciones.textContent = 'Ver Generacion';
+      botonGeneraciones.addEventListener('click',()=>{
+        item.mostrarGeneracion();
+      })
+
       fila.innerHTML = columnas;
+      fila.append(botonVerificar)
+      fila.append(botonGeneraciones);
       cargarTabla.append(fila);
     })
     
-  }*/
+    
+  }
 
   formulario.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -140,11 +163,11 @@ inputNombre.addEventListener('blur', (e) => {
       const nuevaPersona = new Persona(nombre,edad,genero,peso,altura,FechNac);
             personas.push(nuevaPersona);
             console.log(personas)
-            mostrarPersonaEnPantalla(nuevaPersona);
+            cargarPersona()
+            //mostrarPersonaEnPantalla(nuevaPersona);
 
       document.getElementById('formulario').reset();
-  
-      nuevaPersona.esMayorDeEdad()
+
   
     
     }

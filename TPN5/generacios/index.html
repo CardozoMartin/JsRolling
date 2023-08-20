@@ -4,43 +4,60 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Cardozo Martin" />
+    <meta
+      name="description"
+      content="Ejercicon de generacion de js html y css"
+    />
+    <meta name="keywords" content="generaciones" />
     <title>Generaciones</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 
 <body>
-    <main class="container-fluid mt-5 ">
+    <header>
+        <nav class="navbar bg-dark">
+            <div class="container text-center">
+              <h2 class="lead"> Registro de generaciones</h2>
+            </div>
+          </nav>
+    </header>
+    <main class="container-fluid mt-5 mb-5">
+        <div class="text-center">
+            <h1>Registro de Generaciones</h1>
+        </div>
+        
         <section class="bg-dark p-3 rounded text-light w-75 mx-auto ">
             <form class="row g-3 needs-validation " novalidate id="formulario">
                 <fieldset class="w-50">
                     <label for="inputNombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="inputNombre"  required>
-                    <div class="invalid-feedback">Ingrese un telefono valido</div>
+                    <input type="text" class="form-control" id="inputNombre" placeholder="Cardozo Martin" required>
+                    <div class="invalid-feedback">Ingrese un nombre</div>
                 </fieldset>
                 <fieldset class="w-50">
                     <label for="inputEdad" class="form-label">Edad</label>
-                    <input type="number" class="form-control" id="inputEdad"  required>
-                    <div class="invalid-feedback">Ingrese un telefono valido</div>
+                    <input type="number" class="form-control" id="inputEdad" placeholder="Ingrese su edad : 18" required>
+                    <div class="invalid-feedback">Ingrese una edad valida</div>
                 </fieldset>
                 <fieldset class="w-50">
                     <label for="inputGenero" class="form-label">Genero</label>
-                    <input type="text" class="form-control" id="inputGenero"  required>
-                    <div class="invalid-feedback">Ingrese un telefono valido</div>
+                    <input type="text" class="form-control" id="inputGenero" placeholder="Ingrese su genero"  required>
+                    <div class="invalid-feedback">Debe ingresar su genero</div>
                 </fieldset>
                 <fieldset class="w-50">
                     <label for="inputPeso" class="form-label">Peso</label>
-                    <input type="text" class="form-control" id="inputPeso"  required>
-                    <<div class="invalid-feedback">Ingrese un telefono valido</div>
+                    <input type="text" class="form-control" id="inputPeso" placeholder="Indique su peso"  required>
+                    <div class="invalid-feedback">Ingrese su peso</div>
                 </fieldset>
                 <fieldset class="w-50">
                     <label for="inputAltura" class="form-label">Altura</label>
-                    <input type="text" class="form-control" id="inputAltura"  required>
-                    <div class="invalid-feedback">Ingrese un telefono valido</div>
+                    <input type="text" class="form-control" id="inputAltura" placeholder="Indique su altura"  required>
+                    <div class="invalid-feedback">Ingrese su altura</div>
                 </fieldset>
                 <fieldset class="w-50">
                     <label for="inputFechaDeNacimiento" class="form-label">Fecha de Nacimiento</label>
-                    <input type="text" class="form-control" id="inputFechaDeNacimiento"  required>
+                    <input type="text" class="form-control" id="inputFechaDeNacimiento" placeholder="01/01/9999"  required>
                     <div class="invalid-feedback">Ingrese un telefono valido</div>
                 </fieldset>
                 <fieldset>
@@ -52,10 +69,10 @@
     
         </section>
         <section class="mx-auto container pt-5 ">
-            <ul id="cargarTabla" class="mx-auto"></ul>
+            <ul id="" class="mx-auto"></ul>
         </section>
-        <!--<section class="mx-auto container pt-5 ">
-            <table class="table border-black">
+        <section class="mx-auto container pt-5 ">
+            <table class="table border-bottom">
                 <thead>
                   <tr>
                     
@@ -65,14 +82,20 @@
                     <th scope="col">Peso</th>
                     <th scope="col">Altura</th>
                     <th scope="col">Fecha Nacimiento</th>
-                    <th scope="col">Ver Edad</th>
                   </tr>
                 </thead>
-                <tbody id="">
+                <tbody id="cargarTabla">
                 </tbody>
-              </table>-->
+              </table>
         </section>
     </main>
+
+    <footer class="bg-dark py-5 text-light">
+        <section class="container text-center">
+            <p>Ejercicio de Generaciones realizado por Cardozo Martin</p>
+          <p>&copy; Todos los derechos reservados</p>
+        </section>
+      </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

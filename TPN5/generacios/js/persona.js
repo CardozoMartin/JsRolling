@@ -13,23 +13,24 @@ export class Persona {
     const año = this.FechaDeNacimiento.split("/")[0];
 
     if (año >= 1994 && año <= 2010) {
-      console.log("Generacion Z");
-      console.log("Su rasgo caracteristico es : Irreverencia");
+      alert(`Generacion Z
+      Su rasgo caracteristico es : Irreverencia`)
+      
     } else if (año >= 1981 && año <= 1993) {
-      console.log("Generacion Y millennials");
-      console.log("Su rasgo caracteristico es : Frustracion");
+      alert(`${this.nombre.toUpperCase()} tu año ${año} tu generacion es : Y millennials
+      Su rasgo caracteristico es : Frustracion`)
     } else if (año >= 1969 && año <= 1980) {
-      console.log("Generacion X");
-      console.log("Su rasgo caracteristico es : Obsesion por el exito");
+      alert(`${this.nombre.toUpperCase()} tu año ${año} tu generacion es : X
+      Su rasgo caracteristico es : Obsesion por el exito`)
     } else if (año >= 1949 && año <= 1969) {
-      console.log("Baby Boom");
-      console.log("Su rasgo caracteristico es : Ambicion");
+      alert(`${this.nombre.toUpperCase()} tu año ${año} tu generacion es : Baby Boom
+      Su rasgo caracteristico es : Ambicion`)
     } else if (año >= 1930 && año <= 1948) {
-      console.log("Silent Generacion");
-      console.log("Su rasgo caracteristico es : Austeridad");
+      alert(`${this.nombre.toUpperCase()} tu año ${año} tu generacion es : Silent Generacion
+      Su rasgo caracteristico es : Austeridad`)
     } else {
-      console.log(
-        "Ingresaste una edad que no esta en la tabla, ya eres una momia"
+      alert(
+        "Ingresaste una edad que no esta en la tabla !!"
       );
     }
   }

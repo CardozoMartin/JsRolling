@@ -27,6 +27,8 @@ export const validateNumber = (value, campo) => {
     campo.classList.remove('is-valid');
     return false;
   }
+  
+  
 
   // No tenga caracteres no numericos
   if (isNaN(Number(value))) {
@@ -66,6 +68,7 @@ export const validarAltura = (value, campo) => {
         campo.classList.remove('is-valid');
         return false;
       }
+      
     
       // No tenga caracteres no numericos
       if (isNaN(Number(value))) {
