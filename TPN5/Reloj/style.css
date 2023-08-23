@@ -76,3 +76,16 @@
     transform: translate(0.05em, 0.05em);
     box-shadow: 0.05em 0.05em;
   }
+  #fecha{
+    position: relative;
+
+    left: -5%;
+    font-family: "Roboto Mono", monospace;
+    color: #080808;
+    font-size: 1.0em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0.3em;
+    
+  }

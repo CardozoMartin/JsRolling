@@ -78,34 +78,9 @@ inputNombre.addEventListener('blur', (e) => {
   });
   
   const cargarTabla = document.getElementById('cargarTabla');
-
-  /*function mostrarPersonaEnPantalla(persona) {
-    const item = document.createElement('li');
-    item.textContent = `Nombre: ${persona.nombre}, Edad: ${persona.edad}, Sexo: ${persona.sexo}, peso: ${persona.peso}, altura: ${persona.altura}, Fecha de Nacimiento: ${persona.FechaDeNacimiento}`;
-    
-    const botonVerificar = document.createElement('button');
-    botonVerificar.classList = ("btn btn-warning")
-    botonVerificar.textContent = 'Verificar Edad';
-    botonVerificar.addEventListener('click', ()=>{
-
-      
-      
-      
-      const verificarFecha = new Date().getFullYear() - new Date(persona.FechaDeNacimiento).getFullYear();
-      console.log(verificarFecha);
-      if(verificarFecha > 18){
-        alert("es Mayor")
-      }else{
-        alert("es menor")
-      }
-    });
-
-    item.append(botonVerificar);
-    cargarTabla.append(item);
-}*/
-  const cargarPersona = (persona)=>{
+  const cargarPersona = ()=>{
     personas.forEach((item,)=>{
-     
+      
       const fila = document.createElement('tr');
       
       const columnas = `
@@ -146,10 +121,10 @@ inputNombre.addEventListener('blur', (e) => {
     
   }
 
+
   formulario.addEventListener('submit', (e) => {
     e.preventDefault();
   
-    // Repetimos validacion por si no se produjo el blur
     if (
       validateName(nombre,inputNombre) &&
       validateNumber(edad,inputEdad) &&
@@ -158,20 +133,14 @@ inputNombre.addEventListener('blur', (e) => {
       validateName(altura,inputAltura)&&
       validateName(FechNac,inputFechaDeNacimiento)
     ) {
-      // Entra SOLAMENTE si TODAS son validas
-      // Crear el contacto
       const nuevaPersona = new Persona(nombre,edad,genero,peso,altura,FechNac);
-            personas.push(nuevaPersona);
-            console.log(personas)
-            cargarPersona()
-            //mostrarPersonaEnPantalla(nuevaPersona);
-
+      personas.push(nuevaPersona);
       document.getElementById('formulario').reset();
-
-  
-    
+      
     }
+    cargarPersona();
   });
+  
 
  
 
