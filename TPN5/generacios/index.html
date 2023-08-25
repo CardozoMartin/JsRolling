@@ -36,11 +36,7 @@
                     <input type="text" class="form-control" id="inputNombre" placeholder="Cardozo Martin" required>
                     <div class="invalid-feedback">Ingrese un nombre</div>
                 </fieldset>
-                <fieldset class="w-50">
-                    <label for="inputEdad" class="form-label">Edad</label>
-                    <input type="number" class="form-control" id="inputEdad" placeholder="Ingrese su edad : 18" required>
-                    <div class="invalid-feedback">Ingrese una edad valida</div>
-                </fieldset>
+                
                 <fieldset class="w-50">
                     <label for="inputGenero" class="form-label">Genero</label>
                     <input type="text" class="form-control" id="inputGenero" placeholder="Ingrese su genero"  required>
@@ -76,16 +72,16 @@
             <table class="table border-bottom">
                 <thead>
                   <tr>
-                    
+                    <th scope="col">Indice</th>
                     <th scope="col">Nombre</th>
-                    <th scope="col">Edad</th>
+                    
                     <th scope="col">Genero</th>
                     <th scope="col">Peso</th>
                     <th scope="col">Altura</th>
                     <th scope="col">Fecha Nacimiento</th>
                   </tr>
                 </thead>
-                <tbody id="cargarTabla">
+                <tbody id="tablaPersona">
                 </tbody>
               </table>
         </section>

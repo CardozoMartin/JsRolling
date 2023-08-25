@@ -7,8 +7,9 @@ export class Persona {
     this.peso = peso;
     this.altura = altura;
     this.FechaDeNacimiento = FDN;
+    this.codigo = self.crypto.randomUUID();
   }
-  mostrarGeneracion() {
+   mostrarGeneracion() {
     console.log(this.FechaDeNacimiento)
     const año = this.FechaDeNacimiento.split("/")[0];
 
